@@ -28,6 +28,11 @@
 main {
   text-align: center;
   padding-top: 150px;
+  background-image:
+    linear-gradient(#00000055, #00000055), url("../assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
 }
 
 h1 {
@@ -37,10 +42,19 @@ h1 {
 h2 {
   font-size: 24px;
   margin-bottom: 20px;
+  font-family: "courier new", courier, monospace;
+  font-weight: 500;
 }
 
 .goal-selection {
   margin-top: 30px;
+  text-align: center;
+  background-color: #ffffff33;
+  border-radius: 20px;
+  width: 300px;
+  border: 1px solid #ffffff66;
+  padding: 30px;
+  margin: 0 auto;
 }
 
 select {
@@ -54,5 +68,15 @@ select {
 .confirm-btn {
   padding: 10px 20px;
   font-size: 16px;
+  width: 200px;
+  height: 30px;
+  margin-top: 40px;
+  border-radius: 10px;
+  border: none;
+}
+
+.confirm-btn:hover {
+  background-color: #202da0;
+  color: white;
 }
 </style>
