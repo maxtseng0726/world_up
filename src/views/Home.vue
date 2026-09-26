@@ -2,31 +2,93 @@
   <main>
     <h1>World Up</h1>
     <article>
-      <p>
+      <p id="greeting">
         Greetings, <br />
         Let's learn English!
       </p>
     </article>
-    <div class="box">Daily progress<br /></div>
+    <div id="box">
+      Daily progress<br />
+      <div class="progress-bar">
+        <div class="progress-bar-fill"></div>
+        <p>Today:25 mins</p>
+      </div>
+    </div>
+    <button class="start-btn">Start Learning!</button>
   </main>
 </template>
 
 <style scoped>
 main {
-  background-color: rgb(255, 165, 0);
   text-align: center;
+  padding-top: 150px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../assets/bg_home.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 h1 {
-  color: blue;
+  text-align: center;
+  margin-top: 50px;
+  color: whitesmoke;
+  font-family: Georgia, serif;
+  font-weight: bold;
 }
-
-.box {
+p#greeting {
+  color: gainsboro;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 24px;
+  font-family: Avenir, sans-serif;
+  font-weight: bold;
+}
+div#box {
   width: 300px;
   padding: 20px;
   height: 150px;
-  border: 2px solid #030303;
   border-radius: 10px;
-  background-color: #f5f5f5;
+  color: aliceblue;
+  text-align: center;
+  margin: 20px auto;
+  border: 1px solid #ffffff66;
+  border-radius: 10px;
+  background-color: #ffffff33;
+  font-size: 20px;
+  font-family: Avenir, sans-serif;
+  font-weight: bold;
+}
+.start-btn {
+  display: block;
+  margin: 25px auto;
+  padding: 12px 30px;
+  font-size: 20px;
+  font-family: Avenir, sans-serif;
+  border: none;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+.start-btn:hover {
+  background-color: #eeeeee;
+  transform: scale(1.05);
+}
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+.progress-bar-fill {
+  height: 100%;
+  width: 60%;
+  background-color: #4caf50;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
 }
 </style>

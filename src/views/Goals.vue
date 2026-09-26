@@ -29,7 +29,7 @@ main {
   text-align: center;
   padding-top: 150px;
   background-image:
-    linear-gradient(#00000055, #00000055), url("../assets/bg.jpg");
+    linear-gradient(#00000055, #00000055), url("../assets/bg_goals.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
