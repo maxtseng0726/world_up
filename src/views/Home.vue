@@ -14,6 +14,7 @@
 <style scoped>
 main {
   background-color: rgb(255, 165, 0);
+  text-align: center;
 }
 
 h1 {

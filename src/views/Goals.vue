@@ -7,16 +7,16 @@
 
       <select>
         <option disabled selected value="">Set your goals</option>
-        <option value="15">15 min</option>
-        <option value="20">20 min</option>
-        <option value="25">25 min</option>
-        <option value="30">30 min</option>
-        <option value="35">35 min</option>
-        <option value="40">40 min</option>
-        <option value="45">45 min</option>
-        <option value="50">50 min</option>
-        <option value="55">55 min</option>
-        <option value="60">60 min</option>
+        <option value="15">15 mins</option>
+        <option value="20">20 mins</option>
+        <option value="25">25 mins</option>
+        <option value="30">30 mins</option>
+        <option value="35">35 mins</option>
+        <option value="40">40 mins</option>
+        <option value="45">45 mins</option>
+        <option value="50">50 mins</option>
+        <option value="55">55 mins</option>
+        <option value="60">60 mins</option>
       </select>
 
       <button class="confirm-btn">Confirm</button>
