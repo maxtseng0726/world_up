@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
 import Goals from "../views/Goals.vue";
+import Levels from "../views/Levels.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -17,6 +18,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/goals",
     name: "Goals",
     component: Goals,
+  },
+  {
+    path: "/levels",
+    name: "Levels",
+    component: Levels,
   },
 ];
 

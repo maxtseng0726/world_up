@@ -33,7 +33,6 @@ main {
 
 h1 {
   text-align: center;
-  margin-top: 50px;
   color: whitesmoke;
   font-family: Georgia, serif;
   font-weight: bold;
