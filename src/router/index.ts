@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
 import Goals from "../views/Goals.vue";
 import Levels from "../views/Levels.vue";
+import Vocabs from "../views/Vocabs.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -23,6 +24,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/levels",
     name: "Levels",
     component: Levels,
+  },
+  {
+    path: "/vocabs/:filename",
+    name: "Vocabs",
+    component: Vocabs,
+    props: true,
   },
 ];
 

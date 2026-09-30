@@ -1,17 +1,21 @@
 <template>
   <main>
     <h1>World Up</h1>
-    <a href="/public/lv1_vocab.pdf" class="btn-link"
-      ><button class="btn">level I</button></a
-    ><a href="/public/lv2_vocab.pdf" class="btn-link"
-      ><button class="btn">level II</button></a
-    ><a href="/public/lv3_vocab.pdf" class="btn-link"
-      ><button class="btn">level III</button></a
-    ><a href="/public/lv4_vocab.pdf" class="btn-link"
-      ><button class="btn">level IV</button></a
-    ><a href="/public/lv5_vocab.pdf" class="btn-link"
-      ><button class="btn">level V</button></a
-    >
+    <router-link to="/vocabs/lv1_vocab.pdf" class="btn-link">
+      <button class="btn">level I</button>
+    </router-link>
+    <router-link to="/vocabs/lv2_vocab.pdf" class="btn-link">
+      <button class="btn">level II</button>
+    </router-link>
+    <router-link to="/vocabs/lv3_vocab.pdf" class="btn-link">
+      <button class="btn">level III</button>
+    </router-link>
+    <router-link to="/vocabs/lv4_vocab.pdf" class="btn-link">
+      <button class="btn">level IV</button>
+    </router-link>
+    <router-link to="/vocabs/lv5_vocab.pdf" class="btn-link">
+      <button class="btn">level V</button>
+    </router-link>
   </main>
 </template>
 

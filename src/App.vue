@@ -1,10 +1,4 @@
 <template>
-  <header class="navbar">
-    <router-link to="/home">Home</router-link> |
-    <router-link to="/goals">Goals</router-link> |
-    <router-link to="/levels">Levels</router-link>
-  </header>
-
   <!-- The current page content drops in here -->
   <router-view />
 </template>
