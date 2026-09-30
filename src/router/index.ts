@@ -6,12 +6,12 @@ import Levels from "../views/Levels.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "Home",
-    component: Home, // Root path '/' loads Home.vue
+    name: "Greet",
+    component: Goals, // Root path '/' loads Home.vue
   },
   {
     path: "/home",
-    name: "HomeAlias",
+    name: "Home",
     component: Home, // Optional: handles /home just in case
   },
   {
