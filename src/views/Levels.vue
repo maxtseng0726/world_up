@@ -1,12 +1,21 @@
 <template>
   <main>
     <h1>World Up</h1>
-    <button class="btn">level I</button>
-    <button class="btn">level II</button>
-    <button class="btn">level III</button>
-    <button class="btn">level IV</button>
-    <button class="btn">level V</button>
-    <button class="btn">level VI</button>
+    <a href="/public/lv1_vocab.pdf" class="btn-link">
+      <button class="btn">level I</button>
+    </a>
+    <a href="/public/lv2_vocab.pdf" class="btn-link">
+      <button class="btn">level II</button>
+    </a>
+    <a href="/public/lv3_vocab.pdf" class="btn-link">
+      <button class="btn">level III</button>
+    </a>
+    <a href="/public/lv4_vocab.pdf" class="btn-link">
+      <button class="btn">level IV</button>
+    </a>
+    <a href="/public/lv5_vocab.pdf" class="btn-link">
+      <button class="btn">level V</button>
+    </a>
   </main>
 </template>
 
@@ -20,6 +29,11 @@ main {
   background-position: center;
   min-height: 100vh;
 }
+
+.btn-link {
+  text-decoration: none;
+}
+
 .btn {
   display: block;
   margin: 25px auto;
