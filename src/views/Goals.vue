@@ -1,3 +1,25 @@
+<script setup>
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+import { userStore } from "../scripts/store";
+
+const router = useRouter();
+const selectedMinutes = ref("");
+
+const saveGoalAndNavigate = () => {
+  if (!selectedMinutes.value) {
+    alert("Please select your goal first!");
+    return;
+  }
+
+  // Store the variable
+  userStore.setGoal(selectedMinutes.value);
+
+  // Navigate to Home
+  router.push("/home");
+};
+</script>
+
 <template>
   <main>
     <h1>Nice to meet you!</h1>
@@ -5,7 +27,7 @@
     <div class="goal-selection">
       <h2>Goals:</h2>
 
-      <select>
+      <select v-model="selectedMinutes">
         <option disabled selected value="">Set your goals</option>
         <option value="15">15 mins</option>
         <option value="20">20 mins</option>
@@ -19,7 +41,7 @@
         <option value="60">60 mins</option>
       </select>
 
-      <button class="confirm-btn">Confirm</button>
+      <button class="confirm-btn" @click="saveGoalAndNavigate">Confirm</button>
     </div>
   </main>
 </template>

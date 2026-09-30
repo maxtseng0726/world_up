@@ -1,3 +1,13 @@
+<script setup>
+import { userStore } from "../scripts/store";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+const goToLevels = () => {
+  router.push("/levels");
+};
+</script>
+
 <template>
   <main>
     <h1>World Up</h1>
@@ -11,10 +21,10 @@
       Daily progress<br />
       <div class="progress-bar">
         <div class="progress-bar-fill"></div>
-        <p>Today:25 mins</p>
+        <p>Target: {{ userStore.dailyGoal }} mins</p>
       </div>
     </div>
-    <button class="start-btn">Start Learning!</button>
+    <button class="start-btn" @click="goToLevels">Start Learning!</button>
   </main>
 </template>
 
