@@ -1,9 +1,13 @@
 <script setup>
 import { computed } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import VuePdfEmbed from "vue-pdf-embed";
 
 const route = useRoute();
+const router = useRouter();
+const goToLevels = () => {
+  router.push("/levels");
+};
 // Automatically builds the path like /lv1_vocab.pdf based on clicked button
 const pdfSource = computed(() => `/${route.params.filename}`);
 </script>
@@ -11,7 +15,7 @@ const pdfSource = computed(() => `/${route.params.filename}`);
 <template>
   <div class="vocabs-page">
     <div class="nav-bar-top">
-      <router-link to="/levels" class="back-btn">← Back</router-link>
+      <button @click="goToLevels" class="back-btn">← Back</button>
     </div>
     <div class="pdf-container">
       <VuePdfEmbed :source="pdfSource" />
