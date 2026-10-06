@@ -1,6 +1,10 @@
+<script setup>
+import { Analytics } from "@vercel/analytics/vue";
+</script>
 <template>
   <!-- The current page content drops in here -->
   <router-view />
+  <Analytics />
 </template>
 <style>
 :root {
