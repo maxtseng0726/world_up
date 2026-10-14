@@ -50,10 +50,7 @@ print(f"選擇的 PDF：{input_file}")
 
 input_path = Path(input_file)
 
-output_dir = (
-    input_path.parent /
-    f"{input_path.stem}_split"
-)
+output_dir = input_path.parent
 
 output_dir.mkdir(exist_ok=True)
 
@@ -184,7 +181,7 @@ for i, current in enumerate(levels):
 
     output_file = (
         output_dir /
-        f"LEVEL_{level}.pdf"
+        f"lv{level}_vocab.pdf"
     )
 
 
@@ -194,7 +191,7 @@ for i, current in enumerate(levels):
 
 
     print(
-        f"✓ LEVEL_{level}.pdf "
+        f"✓ lv{level}_vocab.pdf "
         f"（第 {start_page + 1}～{end_page} 頁）"
     )
 
