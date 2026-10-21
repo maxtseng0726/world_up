@@ -1,13 +1,24 @@
 <script setup>
-import { computed } from "vue";
-import { useRoute, useRouter } from "vue-router";
+import {computed, onMounted, onUnmounted} from "vue";
+import {useRoute, useRouter} from "vue-router";
 import VuePdfEmbed from "vue-pdf-embed";
+import {useTimer} from "../scripts/timer";
+import {userStore} from "../scripts/store";
 
 const route = useRoute();
 const router = useRouter();
 const goToLevels = () => {
   router.push("/levels");
 };
+
+// Starts timer when enter the page, stops when left
+const {startTimer, stopTimer} = useTimer(() => parseInt(userStore.dailyGoal));
+onMounted(() => {
+  startTimer();
+})
+onUnmounted(() => {
+  stopTimer();
+})
 // Automatically builds the path like /lv1_vocab.pdf based on clicked button
 const pdfSource = computed(() => `/${route.params.filename}`);
 </script>
@@ -18,7 +29,7 @@ const pdfSource = computed(() => `/${route.params.filename}`);
       <button @click="goToLevels" class="back-btn">← Back</button>
     </div>
     <div class="pdf-container">
-      <VuePdfEmbed :source="pdfSource" />
+      <VuePdfEmbed :source="pdfSource"/>
     </div>
   </div>
 </template>

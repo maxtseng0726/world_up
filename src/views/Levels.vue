@@ -1,6 +1,16 @@
+<script setup lang="ts">
+import {useRouter} from "vue-router";
+const router = useRouter();
+const goToHome = () => {
+  router.push("/home");
+};
+</script>
 <template>
   <main>
     <h1>World Up</h1>
+    <div class="nav-bar-top">
+      <button @click="goToHome" class="back-btn">← Back</button>
+    </div>
     <router-link to="/vocabs/lv1_vocab.pdf" class="btn-link">
       <button class="btn">level I</button>
     </router-link>
@@ -30,6 +40,26 @@ main {
   min-height: 100vh;
 }
 
+.nav-bar-top {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+.back-btn {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
 .btn-link {
   text-decoration: none;
 }
@@ -38,7 +68,6 @@ main {
   display: block;
   margin: 25px auto;
   padding: 50px 70px;
-  font-size: 20px;
   width: 500px;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);

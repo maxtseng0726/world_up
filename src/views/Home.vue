@@ -64,7 +64,6 @@ div#box {
   text-align: center;
   margin: 20px auto;
   border: 1px solid #ffffff66;
-  border-radius: 10px;
   background-color: #ffffff33;
   font-size: 20px;
   font-family: Avenir, sans-serif;
@@ -91,13 +90,14 @@ div#box {
   height: 10px;
   background-color: #ddd;
   border-radius: 10px;
+  overflow: hidden;
   margin: 20px auto;
 }
 .progress-bar-fill {
   height: 100%;
-  width: 60%;
+  width: 0;
   background-color: #4caf50;
   border-radius: 10px;
-  transition: width 0.5s ease-in-out;
+  transition: width 0.1s linear;
 }
 </style>
