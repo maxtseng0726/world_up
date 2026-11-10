@@ -4,7 +4,7 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 const goToLevels = () => {
-  router.push("/levels");
+  router.push("/wordcard");
 };
 </script>
 
@@ -24,7 +24,7 @@ const goToLevels = () => {
         <p>Target: {{ userStore.dailyGoal }} mins</p>
       </div>
     </div>
-    <button class="start-btn" @click="goToLevels">Start Learning!</button>
+    <button class="start-btn" @click="goToLevels()">Start Learning!</button>
   </main>
 </template>
 

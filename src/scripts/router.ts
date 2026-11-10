@@ -2,7 +2,8 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
 import Goals from "../views/Goals.vue";
 import Levels from "../views/Levels.vue";
-import Vocabs from "../views/Vocabs.vue";
+import Vocabs from "../views/Vocabs.vue"
+import WordCard from "../views/WordCard.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -31,6 +32,11 @@ const routes: Array<RouteRecordRaw> = [
     component: Vocabs,
     props: true,
   },
+  {
+    path: "/wordcard",
+    name: "WordCard",
+    component: WordCard,
+  }
 ];
 
 const router = createRouter({
